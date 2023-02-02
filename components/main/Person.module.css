@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* align-content: center; */
+  text-align: left;
+  width: 33%;
+  padding-left: 3vw;
+}
+
+.name {
+  font-size: 1.25rem;
+  letter-spacing: 0.2vw;
+}
+
+.title {
+  font-size: 0.85rem;
+}
+
+.email {
+  font-size: 0.85rem;
+}
