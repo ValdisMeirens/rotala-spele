@@ -1,0 +1,54 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* align-content: center; */
+  /* border: 1px solid yellow; */
+  /* overflow-x: hidden; */
+}
+
+.logoContainer {
+  width: 100%;
+  height: auto;
+}
+
+.imageLogo {
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  color: white;
+  width: 100%;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.socContainer {
+  display: flex;
+  width: 35%;
+  height: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+}
+
+.instagram,
+.facebook,
+.youtube {
+  width: 100%;
+  height: auto;
+}
+
+@media all and (min-width: 750px) {
+  .container {
+    display: none;
+  }
+}

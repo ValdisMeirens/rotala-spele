@@ -1,0 +1,52 @@
+.container {
+  width: 90%;
+  margin-inline: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.headeryear {
+  font-size: 3rem;
+  letter-spacing: 0.3vw;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  font-weight: 900;
+}
+
+.headertext {
+  font-size: 1.25rem;
+  /* padding-top: 2%; */
+  padding-bottom: 5%;
+  font-weight: 900;
+}
+
+@media all and (max-width: 900px) {
+  .headeryear {
+    padding-top: 8%;
+  }
+
+  .headertext {
+    padding-bottom: 8%;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .headeryear {
+    padding-top: 10%;
+  }
+
+  .headertext {
+    padding-bottom: 10%;
+  }
+}

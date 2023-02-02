@@ -1,0 +1,37 @@
+.container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 1.5vw;
+
+  padding-bottom: 1.5vw;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  align-items: flex-end;
+  padding-right: 3vw;
+}
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding-left: 3vw;
+}
+
+.name {
+  font-size: 2.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.email {
+  font-size: 1rem;
+}

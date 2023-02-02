@@ -63,7 +63,13 @@
   background-image: url("/Desktop_web_bottom.png");
   flex-direction: row;
   justify-content: space-between;
-  padding: 1% 0vw;
+  padding: 1vw 0vw;
   /* max-height: 10vh; */
   /* border: 1px solid red; */
+}
+
+@media all and (max-width: 750px) {
+  .container {
+    display: none;
+  }
 }

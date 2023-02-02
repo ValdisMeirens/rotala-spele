@@ -1,8 +1,8 @@
+import Grafiks from "@/components/grafiks/Grafiks";
 import Head from "next/head";
-import Main from "@/components/main/Main";
-import MainModule from "@/components/main/MainModule";
+import { server } from "@/components/config";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <Head>
@@ -12,9 +12,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Main />
-        <MainModule />
+        <Grafiks grafiks={props.data} />
       </main>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch(`${server}/api/grafiks`);
+  const data = await res.json();
+
+  return {
+    props: {
+      data,
+    },
+  };
 }

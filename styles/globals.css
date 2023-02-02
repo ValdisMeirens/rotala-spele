@@ -23,6 +23,7 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  /* font-size: 16px; */
 
   font-family: ComfortaaFont, TheNext, Courier, monospace, Times, serif;
 }
@@ -82,15 +83,33 @@ h6 {
   isolation: isolate;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
   * {
     font-size: 16px;
   }
 }
 
+@media screen and (max-width: 1400px) {
+  * {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  * {
+    font-size: 13px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   * {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 

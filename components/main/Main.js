@@ -8,7 +8,6 @@ import rotalaLogo from "../../public/Rotala_logo.png";
 import facebook from "../../public/Plakatu_josla_FB.png";
 import instagram from "../../public/Plakatu_josla_INSTA.png";
 import youtube from "../../public/Plakatu_josla_YOUTUBE.png";
-import bottom from "../../public/Desktop_web_bottom.png";
 import { useState } from "react";
 import classes from "./Main.module.css";
 import Person from "./Person";
@@ -35,12 +34,20 @@ function Main() {
     <div style={backgroundStyling} className={classes.container}>
       <div>
         <div className={classes.logoContainer}>
-          <Image src={rotalaLogo} className={classes.imageLogo} />
+          <Image
+            src={rotalaLogo}
+            className={classes.imageLogo}
+            alt="Rotaļa Logo"
+          />
         </div>
         <div className={classes.socContainer}>
-          <Image src={instagram} className={classes.instagram} />
-          <Image src={facebook} className={classes.facebook} />
-          <Image src={youtube} className={classes.youtube} />
+          <Image
+            src={instagram}
+            className={classes.instagram}
+            alt="Instagram"
+          />
+          <Image src={facebook} className={classes.facebook} alt="facebook" />
+          <Image src={youtube} className={classes.youtube} alt="youtube" />
         </div>
       </div>
       <div className={classes.bottomContainer}>
