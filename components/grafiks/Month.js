@@ -1,5 +1,5 @@
 import React from "react";
-import classed from "./Month.module.css";
+import classes from "./Month.module.css";
 
 function Month(props) {
   const events = props.grafiks.filter(
@@ -7,8 +7,8 @@ function Month(props) {
   );
   const eventitems = events.map((item) => {
     return (
-      <div>
-        <div>
+      <div className={classes.eventcontainer}>
+        <div className={classes.eventtext}>
           {item.DATUMS +
             " " +
             item.MENESIS.toLowerCase() +
@@ -20,8 +20,8 @@ function Month(props) {
   });
 
   return (
-    <div>
-      <div>{props.monthname}</div>
+    <div className={classes.container}>
+      <div className={classes.monthname}>{props.monthname}</div>
       {eventitems}
     </div>
   );

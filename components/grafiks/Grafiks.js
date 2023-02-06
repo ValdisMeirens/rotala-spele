@@ -3,23 +3,6 @@ import classes from "./Grafiks.module.css";
 import Month from "./Month";
 
 function Grafiks(props) {
-  const augusts = props.grafiks.filter(
-    (grafiks) => grafiks.MENESIS == "AUGUSTS"
-  );
-  const augustsContainer = augusts.map((item) => {
-    return (
-      <div>
-        <div>
-          {item.DATUMS +
-            " " +
-            item.MENESIS.toLowerCase() +
-            " - " +
-            item.PASAKUMS}
-        </div>
-      </div>
-    );
-  });
-
   return (
     <div>
       <div className={classes.container}>
@@ -32,6 +15,17 @@ function Grafiks(props) {
         </div>
         <div className={classes.menesacontainer}>
           <Month grafiks={props.grafiks} monthname="AUGUSTS" />
+          <Month grafiks={props.grafiks} monthname="SEPTEMBRIS" />
+          <Month grafiks={props.grafiks} monthname="OKTOBRIS" />
+          <Month grafiks={props.grafiks} monthname="NOVEMBRIS" />
+          <Month grafiks={props.grafiks} monthname="DECEMBRIS" />
+          <Month grafiks={props.grafiks} monthname="JANVĀRIS" />
+          <Month grafiks={props.grafiks} monthname="FEBRUĀRIS" />
+          <Month grafiks={props.grafiks} monthname="MARTS" />
+          <Month grafiks={props.grafiks} monthname="APRĪLIS" />
+          <Month grafiks={props.grafiks} monthname="MAIJS" />
+          <Month grafiks={props.grafiks} monthname="JŪNIJS" />
+          <Month grafiks={props.grafiks} monthname="JŪLIJS" />
         </div>
       </div>
     </div>

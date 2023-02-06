@@ -81,19 +81,6 @@ function MainModule() {
           email="liva.burmistre@gmail.com"
         />
       </div>
-      {/* <div className={classes.bottomContainer}>
-        <Person
-          name="DIĀNA GAVARE"
-          title="Mākslinieciskā vadītāja"
-          email="gavarediana@gmail.com"
-        />
-        <NewPage text="TOP JAUNA LAPA" />
-        <Person
-          name="LĪVA BURMISTRE"
-          title="Rotaļas prezidente"
-          email="liva.burmistre@gmail.com"
-        />
-      </div> */}
     </div>
   );
 }

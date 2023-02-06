@@ -12,6 +12,7 @@ import { useState } from "react";
 import classes from "./Main.module.css";
 import Person from "./Person";
 import NewPage from "./NewPage";
+import Link from "next/link";
 
 function Main() {
   const counter = Math.floor(Math.random() * 3);
@@ -41,13 +42,33 @@ function Main() {
           />
         </div>
         <div className={classes.socContainer}>
-          <Image
-            src={instagram}
-            className={classes.instagram}
-            alt="Instagram"
-          />
-          <Image src={facebook} className={classes.facebook} alt="facebook" />
-          <Image src={youtube} className={classes.youtube} alt="youtube" />
+          <Link
+            href="https://www.instagram.com/tdarotala/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Image
+              src={instagram}
+              className={classes.instagram}
+              alt="Instagram"
+            />
+          </Link>
+
+          <Link
+            href="https://www.facebook.com/TdaRotala"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Image src={facebook} className={classes.facebook} alt="facebook" />
+          </Link>
+
+          <Link
+            href="https://www.youtube.com/@tdaRotala"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Image src={youtube} className={classes.youtube} alt="youtube" />
+          </Link>
         </div>
       </div>
       <div className={classes.bottomContainer}>

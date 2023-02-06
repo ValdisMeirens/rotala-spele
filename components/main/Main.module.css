@@ -9,7 +9,6 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  /* border: 1px solid yellow; */
   overflow-x: hidden;
 }
 
@@ -17,7 +16,6 @@
   width: 70%;
   padding-top: 1%;
   margin: auto;
-  /* border: 1px solid green; */
 }
 
 .imageLogo {
@@ -26,35 +24,32 @@
 }
 
 .socContainer {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* flex-basis: 1; */
+  align-content: center;
   width: 50%;
-  margin: auto;
+  margin-inline: auto;
 }
 
 .facebook {
-  max-width: 25%;
+  max-width: 100%;
   height: auto;
 }
 
 .instagram {
-  max-width: 25%;
+  max-width: 100%;
   height: auto;
 }
 
 .youtube {
-  max-width: 25%;
+  max-width: 100%;
   height: auto;
 }
 
 .bottomContainer {
   opacity: 0.6;
-  /* height: 10vh; */
-  /* border: 1px solid green; */
 }
 
 .bottomContainer {
@@ -64,8 +59,6 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 1vw 0vw;
-  /* max-height: 10vh; */
-  /* border: 1px solid red; */
 }
 
 @media all and (max-width: 750px) {
