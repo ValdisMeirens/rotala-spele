@@ -1,5 +1,3 @@
-import { headers } from "@/next.config";
-import Image from "next/image";
 import React, { useState } from "react";
 import Jautajumi from "./Jautajumi";
 import classes from "./Spele.module.css";
@@ -27,7 +25,19 @@ function Spele(props) {
   // const [atbilde19, setAtbilde19] = useState("");
   // const [atbilde20, setAtbilde20] = useState("");
 
+  const [nameMissing, setNameMissing] = useState(false);
+  const [showAnswersSubmitted, setShowAnswersSubmitted] = useState(false);
+
   const saveResponse = async () => {
+    if (name.length == 0) {
+      setNameMissing(true);
+      setShowAnswersSubmitted(false);
+
+      return;
+    } else {
+      setNameMissing(false);
+    }
+
     const response = await fetch("/api/submitanswers", {
       method: "POST",
       body: JSON.stringify({
@@ -59,6 +69,7 @@ function Spele(props) {
     });
 
     const data = await response.json();
+    setShowAnswersSubmitted(true);
   };
 
   return (
@@ -83,10 +94,10 @@ function Spele(props) {
           value={name}
           placeholder="Ievadi kā tevi dēvēt..."
           className={classes.nameinput}
+          required
           onChange={(e) => setName(e.target.value)}
         />
       </div>
-
       <Jautajumi
         jautajumi={props.jautajumi}
         jautajums="1"
@@ -167,7 +178,16 @@ function Spele(props) {
         jautajums="16"
         value={setAtbilde16}
       />
-      <button onClick={saveResponse}>Saglabat</button>
+      <button onClick={saveResponse} className={classes.button}>
+        SAGLABĀT
+      </button>
+      {nameMissing && <div className={classes.text}>NAV IEVADĪTS VĀRDS</div>}
+      {showAnswersSubmitted && (
+        <div className={classes.text}>
+          ATBILDES IESNIEGTAS, JA IZDOMĀ VĒL KĀDU ATBILDI, TAD VARI PAPILDINĀT,
+          BET IZMANTO TO PAŠU VĀRDU
+        </div>
+      )}
     </div>
   );
 }
