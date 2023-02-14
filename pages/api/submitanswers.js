@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   try {
     // console.log(req.body);
     const query =
-      "INSERT INTO SAGLABAT(VARDS, ATBILDE1, ATBILDE2, ATBILDE3, ATBILDE4, ATBILDE5, ATBILDE6, ATBILDE7, ATBILDE8, ATBILDE9, ATBILDE10, ATBILDE11, ATBILDE12, ATBILDE13, ATBILDE14, ATBILDE15, ATBILDE16, ATBILDE17, ATBILDE18, ATBILDE19, ATBILDE20) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+      "INSERT INTO SAGLABAT(VARDS, ATBILDE1, ATBILDE2, ATBILDE3, ATBILDE4, ATBILDE5, ATBILDE6, ATBILDE7, ATBILDE9, ATBILDE10, ATBILDE11, ATBILDE12, ATBILDE13, ATBILDE15, ATBILDE16) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     const values = [
       req.body.VARDS,
       req.body.ATBILDE1,
@@ -22,19 +22,13 @@ export default async function handler(req, res) {
       req.body.ATBILDE5,
       req.body.ATBILDE6,
       req.body.ATBILDE7,
-      req.body.ATBILDE8,
       req.body.ATBILDE9,
       req.body.ATBILDE10,
       req.body.ATBILDE11,
       req.body.ATBILDE12,
       req.body.ATBILDE13,
-      req.body.ATBILDE14,
       req.body.ATBILDE15,
       req.body.ATBILDE16,
-      req.body.ATBILDE17,
-      req.body.ATBILDE18,
-      req.body.ATBILDE19,
-      req.body.ATBILDE20,
     ];
     const [data] = await dbconnection.execute(query, values);
     dbconnection.end();

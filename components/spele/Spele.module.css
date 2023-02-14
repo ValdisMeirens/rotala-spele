@@ -3,8 +3,54 @@
   flex-direction: column;
 }
 
-.picturecontainer {
+.headercontainer {
   display: flex;
-  width: 100%;
-  height: auto;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+
+  width: 60%;
+  margin: auto;
+}
+
+.headertext {
+  font-size: 2rem;
+  padding-top: 5%;
+  padding-bottom: 3%;
+}
+
+.headerdescription {
+  line-height: 2rem;
+  padding: 2% 0;
+  border-top: dashed green;
+
+  border-bottom: dashed green;
+}
+.inputcontainer {
+  width: 60%;
+  margin: auto;
+  padding-top: 2%;
+}
+.nameinput {
+  width: 40%;
+  padding: 1% 2%;
+  border: 1px solid #ccc;
+}
+
+@media all and (max-width: 1000px) {
+  .inputcontainer {
+    width: 80%;
+    margin: auto;
+  }
+
+  .headercontainer {
+    width: 80%;
+    margin: auto;
+  }
+  .nameinput {
+    width: 100%;
+    padding: 3% 3%;
+    border: 1px solid #ccc;
+  }
 }
